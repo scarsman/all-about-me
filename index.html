@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    /* Reset and Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: linear-gradient(135deg, #0078ff, #00b8e6);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav ul li {
+      padding: 0.5rem 1rem;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+    nav ul li:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Main Content */
+    main {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #0078ff;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .about, .contact {
+      text-align: center;
+    }
+    .projects, .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .project, .skill {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .project:hover, .skill:hover {
+      transform: translateY(-5px);
+    }
+    .project img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+    .project h3, .skill h3 {
+      margin-top: 0.8rem;
+      font-size: 1.2rem;
+    }
+    .project p, .skill p {
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Button Style */
+    .btn {
+      display: inline-block;
+      background-color: #0078ff;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+    .btn:hover {
+      background-color: #005bb5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Floating Chatbot Button */
+    #chatbot-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    #chatbot-button button {
+      background-color: #0078ff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+    #chatbot-button button:hover {
+      background-color: #005bb5;
+    }
+    #chatbot-frame {
+      width: 400px;
+      height: 700px;
+      border: none;
+      overflow: hidden;
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Hipolito Perpo</h1>
+    <p>Sysadmin | Frustrated Developer | Breeder/Fighter</p>
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Me Section -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>Hi, I'm Pol! I wear many hats—a system administrator by day, a frustrated Python developer by night, and a passionate breeder and fighter of gamefowl in my spare time. Based in the Philippines, I've embraced the local culture where gamefowl fighting is legal and celebrated as a traditional sport.
+        My career in systems administration keeps me grounded and sharp, ensuring that critical infrastructures run smoothly. At the same time, my journey in Python development is a constant learning curve, filled with challenges that fuel my drive to improve and innovate, even when the road gets a bit frustrating.
+        When I'm not troubleshooting networks or writing code, you can find me immersed in the vibrant world of gamefowl. Breeding and fighting these remarkable birds has taught me discipline, strategy, and the value of tradition—qualities that also enhance my professional endeavors.
+        I believe that every challenge, whether it's debugging code or preparing for a gamefowl match, is an opportunity to grow. I'm excited to share my diverse experiences and unique perspective through this portfolio.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+    </section>
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">
+          <h3>Systems Administration & IT Infrastructure Management</h3>
+          <p>
+            I ensure reliable and secure IT operations through expert troubleshooting, network management, and maintaining robust systems. My experience keeps digital infrastructures stable and efficient.
+          </p>
+        </div>
+        <div class="skill">
+          <h3>Python Development & Automation</h3>
+          <p>
+            Although sometimes challenging, my journey with Python has enabled me to automate routine tasks and streamline complex processes. I continuously seek innovative solutions through coding and automation.
+          </p>
+        </div>
+        <div class="skill">
+          <h3>Strategic Gamefowl Breeding & Competitive Fighting</h3>
+          <p>
+            As a passionate breeder and fighter of gamefowl, I apply strategic thinking, discipline, and risk management to every match. This unique skill set has taught me the value of planning and perseverance in both my personal and professional life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <p>If you’d like to get in touch, feel free to say hello!</p>
+      <p>Email: <a href="mailto:hperpo@gmail.com">hperpo@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/hipolito-perpo-1269535a/" target="_blank">linkedin.com/in/hipolito-perpo-1269535a</a></p>
+      <!-- Download Resume Button -->
+      <a href="resume.pdf" download class="btn">Download Resume</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 John Doe. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating Chatbot -->
+  <div id="chatbot-button">
+    <button>💬</button>
+  </div>
+  <iframe
+    id="chatbot-frame"
+    src="http://localhost:5000/chat"
+    title="Chatbot Widget"
+  ></iframe>
+
+  <script>
+    // Toggle Chatbot - chat with my own ai
+    document.getElementById("chatbot-button").addEventListener("click", () => {
+      const frame = document.getElementById("chatbot-frame");
+      frame.style.display = frame.style.display === "none" || frame.style.display === "" ? "block" : "none";
+    });
+
+    // Dynamically Resize iframe (if needed)
+    window.addEventListener("message", (event) => {
+      if (event.data.iframeHeight) {
+        document.getElementById("chatbot-frame").style.height = event.data.iframeHeight + "px";
+      }
+    });
+  </script>
+</body>
+</html>
